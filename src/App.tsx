@@ -6,7 +6,7 @@ import {LoginPage} from './components/LoginPage'
 
 
 function App() {
-  const [loggedInStatus,setLoggedInStatus] = useState(0);
+  const [loggedInStatus, setLoggedInStatus] = useState(0);
 
   const setUserLoggedInStatus = (user:number) => {
     setLoggedInStatus(user);
