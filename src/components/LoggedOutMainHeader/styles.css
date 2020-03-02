@@ -1,0 +1,28 @@
+.MainHeaderDiv{
+    background-color: white;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+}
+
+.MainHeaderSearchInput{
+    border: none;
+    padding: 10px;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.MainHeaderSearchButton{
+    background-color: white;
+    border: none;
+    color: '#4a4ccb';
+    margin: 0px 10px;
+}
+
+.MainHeaderLoginorSignup{
+    margin-right: 10px;
+}
+
+.MainHeaderA{
+    color:#3E4099;
+}

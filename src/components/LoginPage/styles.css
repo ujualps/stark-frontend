@@ -1,0 +1,12 @@
+.LoginPageMain{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 100vh;
+
+}
+.LoginPageAside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

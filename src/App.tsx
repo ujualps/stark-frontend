@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {MainHeader} from './components/LoggedOutMainHeader';
+// import {LoginBox} from './components/LoginBox'
+import {LoginPage} from './components/LoginPage'
+
 
 function App() {
-  return (
+  const [loggedInStatus,setLoggedInStatus] = useState(0);
+
+  const setUserLoggedInStatus = (user:number) => {
+    setLoggedInStatus(user);
+  }
+  if(loggedInStatus == 0){
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <LoginPage/>
     </div>
   );
+  }
+  else{
+    return (
+    <div className="App">
+       <MainHeader/>
+    </div>
+  );
+  }
+  
 }
 
 export default App;

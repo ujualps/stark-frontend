@@ -1,0 +1,44 @@
+.LoginBoxSection{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    height: 200px;
+}
+.LoginBoxSectionImg{
+    margin: 10px;
+}
+
+
+.LoginBoxSectionInput{
+    margin: 5px;
+    padding: 5px;
+}
+
+.SigninButton{
+    background-color: #282CA8;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.RowSpaceBetween{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.LoginBoxA{
+    color: #282CA8;
+}
+
+.LoginBoxP{
+    margin-left: 10px;
+}
+
