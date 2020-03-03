@@ -17,13 +17,15 @@
     border: none;
     color: '#4a4ccb';
     margin: 0px 10px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.MainHeaderLoginorSignup{
-    margin-right: 10px;
-}
+
 
 .MainHeaderA{
     color:#3E4099;
-    margin: auto auto;
+    margin: auto 20px;
+    font-weight: bold;
+    font-size: 20px;
 }

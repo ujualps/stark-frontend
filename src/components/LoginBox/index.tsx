@@ -16,8 +16,35 @@ export const LoginBox = (props:loginPageValues) => {
     const [sdesignation, setDesignation] = React.useState("");
     const [sdob, setDob] = React.useState("");
     const [spassword, setPassword] = React.useState("");
+    const [validateEmail, setValidateEmail] = React.useState("");
+    const [validateUsername, setValidateUsername] = React.useState("");
+    const [validateDesignation, setValidateDesignation] = React.useState("");
+    const [validatePassword, setValidatePassword] = React.useState("");
+    const [validateDob, setValidateDob] = React.useState("");
+    
 
     const handleSignUpClick = () => {
+        
+        if(!/[a-zA-z ]{4}[a-zA-Z]*$/.test(susername)){
+            setValidateUsername("Invalid Username")
+            return
+        }
+        if(!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(semail)){
+            setValidateEmail("Invalid Email")
+            return
+        }
+        if(!/^[a-zA-Z]+$/.test(sdesignation)){
+            setValidateDesignation("Invalid Designation")
+            return
+        }
+        if(!/^([0-2][0-9]|(3)[0-1])(-)(((0)[0-9])|((1)[0-2]))(-)\d{4}$/.test(sdob)){
+            setValidateDob("Invalid DOB")
+            return
+        }
+        if(!/^.{8}.*$/.test(spassword)){
+            setValidatePassword("Password must contain minimum 8 characters")
+            return
+        }
         axios.post('http://localhost:5000/users',
         {
             username: susername,
@@ -31,6 +58,13 @@ export const LoginBox = (props:loginPageValues) => {
             setDesignation('')
             setDob('')
             setPassword('')
+
+            setValidateDesignation('')
+            setValidateDob('')
+            setValidateEmail('')
+            setValidatePassword('')
+            setValidateUsername('')
+            
             props.setLoginSignup(0)
         }).catch(function (error){
             
@@ -42,7 +76,8 @@ export const LoginBox = (props:loginPageValues) => {
             email: semail,
             password: spassword
         }).then(function (response) {
-            props.setUser(1)
+            props.setUser(response.data.id)
+            console.log(response.data.id)
         })
     }
     
@@ -65,10 +100,15 @@ export const LoginBox = (props:loginPageValues) => {
             <section className = "LoginBoxSection">
             <img className = "LoginBoxSectionImg"  src = {logo} alt = "LOGO"/>
             <input className = "LoginBoxSectionInput" value={susername} placeholder='Full Name' id="username" type = "text" onChange={e => setUsername(e.target.value)}/>
+            <li className="errorMsg">{validateUsername}</li>
             <input className = "LoginBoxSectionInput" value={semail} placeholder='Email' type = "text" onChange={e => setEmail(e.target.value)}/>
+            <li className="errorMsg">{validateEmail}</li>
             <input className = "LoginBoxSectionInput" value={sdesignation} placeholder='Designation' type = "text" onChange={e => setDesignation(e.target.value)}/>
+            <li className="errorMsg">{validateDesignation}</li>
             <input className = "LoginBoxSectionInput" value={sdob} placeholder='Date of Birth (DD-MM-YYYY)' type = "text" onChange={e => setDob(e.target.value)}/>
+            <li className="errorMsg">{validateDob}</li>
             <input className = "LoginBoxSectionInput" value={spassword} placeholder='Password' type = "password" onChange={e => setPassword(e.target.value)}/>
+            <li className="errorMsg">{validatePassword}</li>
             {/* <input className = "LoginBoxSectionInput" placeholder='Confirm Password' type = "text"/> */}
             <div className = "RowSpaceBetween">
                 <button className= "SigninButton" onClick={() => handleSignUpClick()}>Sign Up</button>

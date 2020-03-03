@@ -12,7 +12,7 @@ export const MainHeader = (props: MainHeaderValue) => {
             <img src = {logo} alt= 'LOGO'/>
             <input placeholder="Search..." className = 'MainHeaderSearchInput' type = 'text'/>
             <button className='MainHeaderSearchButton' type="button">Search</button>
-            <p className="MainHeaderLoginorSignup"><a onClick={() => props.setUser(-1)} className="MainHeaderA">Logout</a></p>
+            <a onClick={() => props.setUser(-1)} className="MainHeaderA">Logout</a>
         </header>
     )
 }

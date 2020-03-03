@@ -7,4 +7,6 @@
     background-color:white;
     flex-grow: 1;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
 }
