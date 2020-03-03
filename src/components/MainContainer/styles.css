@@ -1,0 +1,10 @@
+.MainPageMain{
+    display: flex;
+    flex-direction: column;
+}
+
+.MainBody{
+    background-color:white;
+    flex-grow: 1;
+    height: 100vh;
+}

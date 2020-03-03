@@ -1,27 +1,28 @@
-import React, {useState} from 'react';
+import * as React from 'react';
 import './App.css';
-import {MainHeader} from './components/LoggedOutMainHeader';
+import {MainHeader} from './components/MainHeader';
 // import {LoginBox} from './components/LoginBox'
-import {LoginPage} from './components/LoginPage'
+import {LoginPage} from './components/LoginPage';
+import {MainPage} from './components/MainContainer';
 
 
 function App() {
-  const [loggedInStatus, setLoggedInStatus] = useState(0);
+  const [UserId, setUserId] = React.useState(-1);
 
   const setUserLoggedInStatus = (user:number) => {
-    setLoggedInStatus(user);
+    setUserId(user);
   }
-  if(loggedInStatus == 0){
+  if(UserId == -1){
     return (
     <div className="App">
-       <LoginPage/>
+       <LoginPage setUser={setUserLoggedInStatus}/>
     </div>
   );
   }
   else{
     return (
     <div className="App">
-       <MainHeader/>
+       <MainPage setUser={setUserLoggedInStatus}/>
     </div>
   );
   }
