@@ -17,7 +17,7 @@ export const LoginBox = (props:loginPageValues) => {
     const [sdob, setDob] = React.useState("");
     const [spassword, setPassword] = React.useState("");
 
-    const handleClick = () => {
+    const handleSignUpClick = () => {
         axios.post('http://localhost:5000/users',
         {
             username: susername,
@@ -35,17 +35,15 @@ export const LoginBox = (props:loginPageValues) => {
         }).catch(function (error){
             
         })
-        // axios({
-        //     method: 'post',
-        //     url: 'http://localhost:5000/users',
-        //     data: {
-        //         username: susername,
-        //         email: semail,
-        //         designation: sdesignation,
-        //         dob: sdob,
-        //         password: spassword
-        //     }
-        // });
+    }
+
+    const handleLoginClick = () => {
+        axios.post('http://localhost:5000/login',{
+            email: semail,
+            password: spassword
+        }).then(function (response) {
+            props.setUser(1)
+        })
     }
     
 
@@ -53,10 +51,10 @@ export const LoginBox = (props:loginPageValues) => {
         return(
         <section className = "LoginBoxSection">
             <img className = "LoginBoxSectionImg" src = {logo} alt = "LOGO"/>
-            <input className = "LoginBoxSectionInput" placeholder='Email' type = "text"/>
-            <input className = "LoginBoxSectionInput" placeholder='Password' type = "text"/>
+            <input className = "LoginBoxSectionInput" placeholder='Email' type="text" value={semail} onChange={e => setEmail(e.target.value)}/>
+            <input className = "LoginBoxSectionInput" placeholder='Password' type="password" value={spassword} onChange={e => setPassword(e.target.value)}/>
             <div className = "RowSpaceBetween">
-                <button className= "SigninButton" onClick={() => props.setUser(0)}>Login</button>
+                <button className= "SigninButton" onClick={() => handleLoginClick()}>Login</button>
                 <p className = "LoginBoxP">or <a onClick={() => props.setLoginSignup(1)} className="LoginBoxA">SignUp</a> instead?</p>
             </div>
         </section>
@@ -70,10 +68,10 @@ export const LoginBox = (props:loginPageValues) => {
             <input className = "LoginBoxSectionInput" value={semail} placeholder='Email' type = "text" onChange={e => setEmail(e.target.value)}/>
             <input className = "LoginBoxSectionInput" value={sdesignation} placeholder='Designation' type = "text" onChange={e => setDesignation(e.target.value)}/>
             <input className = "LoginBoxSectionInput" value={sdob} placeholder='Date of Birth (DD-MM-YYYY)' type = "text" onChange={e => setDob(e.target.value)}/>
-            <input className = "LoginBoxSectionInput" value={spassword} placeholder='Password' type = "text" onChange={e => setPassword(e.target.value)}/>
+            <input className = "LoginBoxSectionInput" value={spassword} placeholder='Password' type = "password" onChange={e => setPassword(e.target.value)}/>
             {/* <input className = "LoginBoxSectionInput" placeholder='Confirm Password' type = "text"/> */}
             <div className = "RowSpaceBetween">
-                <button className= "SigninButton" onClick={() => handleClick()}>Sign Up</button>
+                <button className= "SigninButton" onClick={() => handleSignUpClick()}>Sign Up</button>
                 <p className = "LoginBoxP">or <a onClick={() => props.setLoginSignup(0)} className="LoginBoxA">Login</a> instead?</p>
             </div>
         </section>
