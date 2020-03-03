@@ -22,7 +22,7 @@ function App() {
   else{
     return (
     <div className="App">
-       <MainPage setUser={setUserLoggedInStatus}/>
+       <MainPage setUser={setUserLoggedInStatus} userId={UserId}/>
     </div>
   );
   }

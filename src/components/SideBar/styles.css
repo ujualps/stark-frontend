@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    width: 5vw;
 }
 
 .ActiveButton{
@@ -10,13 +11,13 @@
     margin: 20px 5px;
     background-color: blue;
     height: 40px;
-    width: 2opx;
+
     border-radius: 50px;
 }
 .NonActiveButton{
     padding: 20px;
     margin: 20px 5px;
     height: 40px;
-    width: 2opx;
+
     border-radius: 50px;
 }

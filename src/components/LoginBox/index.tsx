@@ -30,18 +30,22 @@ export const LoginBox = (props:loginPageValues) => {
             return
         }
         if(!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(semail)){
+            setValidateUsername("")
             setValidateEmail("Invalid Email")
             return
         }
         if(!/^[a-zA-Z]+$/.test(sdesignation)){
+            setValidateEmail("")
             setValidateDesignation("Invalid Designation")
             return
         }
         if(!/^([0-2][0-9]|(3)[0-1])(-)(((0)[0-9])|((1)[0-2]))(-)\d{4}$/.test(sdob)){
+            setValidateDesignation("")
             setValidateDob("Invalid DOB")
             return
         }
         if(!/^.{8}.*$/.test(spassword)){
+            setValidateDob("")
             setValidatePassword("Password must contain minimum 8 characters")
             return
         }
@@ -64,7 +68,7 @@ export const LoginBox = (props:loginPageValues) => {
             setValidateEmail('')
             setValidatePassword('')
             setValidateUsername('')
-            
+
             props.setLoginSignup(0)
         }).catch(function (error){
             
