@@ -34,7 +34,7 @@ export const LoginBox = (props:loginPageValues) => {
             setValidateEmail("Invalid Email")
             return
         }
-        if(!/^[a-zA-Z]+$/.test(sdesignation)){
+        if(!/^[a-zA-Z][a-zA-Z ]*$/.test(sdesignation)){
             setValidateEmail("")
             setValidateDesignation("Invalid Designation")
             return
