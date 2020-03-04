@@ -1,0 +1,6 @@
+.HomePageMain{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 8fr 3fr;
+    padding: 20px;
+}
