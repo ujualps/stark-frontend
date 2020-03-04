@@ -2,6 +2,41 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+}
+.PostCardTitle{
+    font-size: larger;
+    color: blue;
+    font-weight: bolder;
+}
+.PostCardTitleBox{
+    display: flex;
+    justify-content: start;
+}
+.PostCardDescBox{
+    display: flex;
+    justify-content: start;
+    padding-top: 10px;
+}
+.PostCardUserDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+.UserImg{
+    width:25px;
+    height: 25px;
+    margin: auto 5px;
+}
+.PostCardUserName{
+    font-weight: 500;
+}
+.ColumnCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

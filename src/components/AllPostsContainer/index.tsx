@@ -9,15 +9,21 @@ export const AllPostContainer = () => {
   axios.get("http://localhost:5000/get_all_posts").then(function(response) {
     setPosts(response.data);
   });
+
+    // console.log(posts)
+  
   return (
     <div className='AllPostContainer'>
-      {posts.map((post: PostCardValues) => (
-        <PostCard
-          title={post.title}
-          desc={post.desc}
-          postedUserId={post.postedUserId}
-          postId={post.postId}
-        />
+        <div className="RecentlyAskedHeading">
+            <li className="AllPostsHeading">Recently Asked</li>
+        </div>
+        {posts.map((post: PostCardValues) => (
+            <PostCard
+                title={post.title}
+                desc={post.desc}
+                userid={post.userid}
+                id={post.id}
+            />
       ))}
     </div>
   );

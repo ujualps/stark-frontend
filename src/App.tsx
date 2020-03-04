@@ -12,7 +12,7 @@ function App() {
   const setUserLoggedInStatus = (user:number) => {
     setUserId(user);
   }
-  if(UserId == -1){
+  if(UserId === -1){
     return (
     <div className="App">
        <LoginPage setUser={setUserLoggedInStatus}/>
