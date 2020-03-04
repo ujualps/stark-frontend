@@ -1,6 +1,6 @@
 .MainHeaderDiv{
     background-color: white;
-    border: 1px solid grey;
+    border: 1px solid rgb(192, 192, 192);
     display: flex;
     flex-direction: row;
 }

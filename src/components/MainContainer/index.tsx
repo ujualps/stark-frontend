@@ -16,7 +16,7 @@ export const MainPage = (props: MainpageValues) => {
     const setContent = () => {
         if(activeNav === 0){
             return(
-                <HomePage/>
+                <HomePage userId={props.userId}/>
             )
         }
         if(activeNav === 2){

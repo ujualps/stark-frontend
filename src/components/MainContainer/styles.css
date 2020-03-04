@@ -1,6 +1,7 @@
 .MainPageMain{
     display: flex;
     flex-direction: column;
+    
 }
 
 .MainBody{
