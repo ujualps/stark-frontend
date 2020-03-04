@@ -1,0 +1,4 @@
+.PostCardMain{
+    display: flex;
+    flex-direction: column;
+}
