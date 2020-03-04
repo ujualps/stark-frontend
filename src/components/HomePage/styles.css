@@ -4,3 +4,7 @@
     grid-template-columns: 8fr 3fr;
     padding: 20px;
 }
+.MainPageContents{
+    display: flex;
+    flex-direction: column;
+}

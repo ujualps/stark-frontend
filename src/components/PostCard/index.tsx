@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './styles.scss';
+import './styles.css';
 
-interface PostCardValues{
+export interface PostCardValues{
     title: string,
-    desc: title,
+    desc: string,
     postedUserId: number,
     postId: number
 }

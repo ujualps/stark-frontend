@@ -25,7 +25,7 @@ export const LoginBox = (props:loginPageValues) => {
 
     const handleSignUpClick = () => {
         
-        if(!/[a-zA-z ]{4}[a-zA-Z]*$/.test(susername)){
+        if(!/[a-zA-Z ]{4}[a-zA-Z ]*$/.test(susername)){
             setValidateUsername("Invalid Username")
             return
         }
