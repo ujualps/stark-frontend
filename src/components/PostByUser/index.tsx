@@ -3,10 +3,17 @@ import "./styles.css";
 import axios from "axios";
 import { PostCardValues, PostCard } from "../PostCard";
 
-export const AllPostContainer = () => {
+interface PostByUserValues{
+    userid: number
+}
+
+export const PostByUserContainer = (props: PostByUserValues) => {
   const [posts, setPosts] = React.useState<PostCardValues[]>([]);
 
-  axios.get("http://localhost:5000/get_all_posts").then(function(response) {
+  axios.post("http://localhost:5000/get_posts_by_user",
+  {
+      userid: props.userid
+  }).then(function(response) {
     setPosts(response.data);
   });
 
@@ -15,7 +22,7 @@ export const AllPostContainer = () => {
   return (
     <div className='AllPostContainer'>
         <div className="RecentlyAskedHeading">
-            <li className="AllPostsHeading">Recently Asked</li>
+            <li className="AllPostsHeading">Posts</li>
         </div>
         
         {posts.map((post: PostCardValues) => (

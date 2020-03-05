@@ -11,13 +11,13 @@
     margin: 20px 5px;
     background-color: blue;
     height: 40px;
-
+    
     border-radius: 50px;
 }
 .NonActiveButton{
     padding: 20px;
     margin: 20px 5px;
     height: 40px;
-
+    cursor: pointer;
     border-radius: 50px;
 }

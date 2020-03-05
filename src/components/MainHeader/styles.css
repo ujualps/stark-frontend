@@ -19,6 +19,7 @@
     margin: 0px 10px;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
 
 
@@ -28,4 +29,5 @@
     margin: auto 20px;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
