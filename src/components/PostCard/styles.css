@@ -31,6 +31,7 @@
   width: 25px;
   height: 25px;
   margin: auto 5px;
+  border-radius: 5px;
 }
 .PostCardUserName {
   font-weight: 500;
