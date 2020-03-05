@@ -1,50 +1,50 @@
-.LoginBoxSection{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+.LoginBoxSection {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
 }
-.LoginBoxSectionImg{
-    margin: 0px;
-}
-
-
-.LoginBoxSectionInput{
-    margin: 8px;
-    padding: 10px;
+.LoginBoxSectionImg {
+  margin: 0px;
 }
 
-.SigninButton{
-    background-color: #282CA8;
-    color: white;
-    border: none;
-    padding: 5px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-    flex-grow: 1;
-    cursor: pointer;
+.LoginBoxSectionInput {
+  margin: 8px;
+  padding: 10px;
 }
 
-.RowSpaceBetween{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.SigninButton {
+  background-color: #282ca8;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  flex-grow: 1;
+  cursor: pointer;
 }
 
-.LoginBoxA{
-    color: #282CA8;
-    cursor: pointer;
+.RowSpaceBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.LoginBoxP{
-    margin-left: 10px;
+.LoginBoxA {
+  color: #282ca8;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.errorMsg{
-    list-style: none;
-    font-size: 15px;
-    color:red;
+.LoginBoxP {
+  margin-left: 10px;
+}
+
+.errorMsg {
+  list-style: none;
+  font-size: 15px;
+  color: red;
 }

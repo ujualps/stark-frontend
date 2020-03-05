@@ -6,7 +6,7 @@ interface MainHeaderValue {
   setUser: (id: number) => void;
 }
 
-export const MainHeader = (props: MainHeaderValue) => {
+export const LoggedOutMainHeader = (props: MainHeaderValue) => {
   return (
     <header className="MainHeaderDiv" data-testid="mainheader">
       <img src={logo} alt="LOGO" />
@@ -19,7 +19,7 @@ export const MainHeader = (props: MainHeaderValue) => {
         Search
       </button>
       <button onClick={() => props.setUser(-1)} className="MainHeaderA">
-        Logout
+        SignUp or Login
       </button>
     </header>
   );

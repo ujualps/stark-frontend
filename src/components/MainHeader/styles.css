@@ -1,33 +1,33 @@
-.MainHeaderDiv{
-    background-color: white;
-    border: 1px solid rgb(192, 192, 192);
-    display: flex;
-    flex-direction: row;
+.MainHeaderDiv {
+  background-color: white;
+  border: 1px solid rgb(192, 192, 192);
+  display: flex;
+  flex-direction: row;
 }
 
-.MainHeaderSearchInput{
-    border: none;
-    padding: 10px;
-    margin-left: 20px;
-    flex-grow: 1;
+.MainHeaderSearchInput {
+  border: none;
+  padding: 10px;
+  margin-left: 20px;
+  flex-grow: 1;
 }
 
-.MainHeaderSearchButton{
-    background-color: white;
-    border: none;
-    color: '#4a4ccb';
-    margin: 0px 10px;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
+.MainHeaderSearchButton {
+  background-color: white;
+  border: none;
+  color: "#4a4ccb";
+  margin: 0px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-
-
-.MainHeaderA{
-    color:#3E4099;
-    margin: auto 20px;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
+.MainHeaderA {
+  color: #3e4099;
+  margin: auto 20px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  border:none;
 }

@@ -1,42 +1,44 @@
-.NewPostMain{
-    border: 2px solid rgb(199, 199, 199);
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    width: 90%;
-    padding: 20px;
-    border-radius: 5px;
-    
+.NewPostMain {
+  border: 2px solid rgb(199, 199, 199);
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 90%;
+  padding: 20px;
+  border-radius: 5px;
 }
-.PostHeading{
-    height: 10%;
-    width: 100%;
-    font-weight:bold;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(214, 214, 214);
 
+.PostHeading {
+  height: 10%;
+  width: 100%;
+  font-weight: bold;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(214, 214, 214);
 }
-.PostDescription{
-    height: 90%;
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(214, 214, 214);
-    margin-top:15px;
+
+.PostDescription {
+  height: 90%;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(214, 214, 214);
+  margin-top: 15px;
 }
-.PostButtonDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+
+.PostButtonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
-.PostButton{
-    background-color: blue;
-    border: none;
-    padding: 15px 35px;
-    color: white;
-    margin-top: 15px;
-    border-radius:5px;
-    font-weight:bold;
-    cursor: pointer;
+
+.PostButton {
+  background-color: blue;
+  border: none;
+  padding: 15px 35px;
+  color: white;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }

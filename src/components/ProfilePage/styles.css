@@ -1,30 +1,30 @@
-.ProfileMain{
-    background-color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.ProfileMain {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.ProfilePictureBackground{
-    width: 95vw;
-    height: 30vh;
-    background-color: orange;
+.ProfilePictureBackground {
+  width: 95vw;
+  height: 30vh;
+  background-color: orange;
 }
 
-.ProfileSection{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    height: 100%;
+.ProfileSection {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 100%;
 }
-.ActivitySection{
-    padding-top: 10em;
+.ActivitySection {
+  padding-top: 10em;
 }
-.ProfileAside{
-    height: 100%;
+.ProfileAside {
+  height: 100%;
 }
-.ProfilePageImage{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    border: 15px solid white;
-    margin-top: 10em;
+.ProfilePageImage {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 15px solid white;
+  margin-top: 10em;
 }

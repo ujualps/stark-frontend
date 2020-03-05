@@ -1,22 +1,23 @@
-.sideBarBody{
-    background-color: rgb(94, 94, 94);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100px;
+.sideBarBody {
+  background-color: rgb(94, 94, 94);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100px;
 }
 
-.ActiveButton{
-    padding: 20px;
-    margin: 20px 5px;
-    background-color: blue;
-    height: 40px;
-    border-radius: 50px;
+.ActiveButton {
+  padding: 20px;
+  margin: 20px 5px;
+  background-color: blue;
+  height: 40px;
+  border-radius: 50px;
 }
-.NonActiveButton{
-    padding: 20px;
-    margin: 20px 5px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 50px;
+
+.NonActiveButton {
+  padding: 20px;
+  margin: 20px 5px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50px;
 }

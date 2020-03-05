@@ -10,21 +10,21 @@ export const AllPostContainer = () => {
     setPosts(response.data);
   });
 
-    // console.log(posts)
-  
+  // console.log(posts)
+
   return (
-    <div className='AllPostContainer' data-testid='allpost'>
-        <div className="RecentlyAskedHeading">
-            <li className="AllPostsHeading">Recently Asked</li>
-        </div>
-        
-        {posts.map((post: PostCardValues) => (
-            <PostCard
-                title={post.title}
-                desc={post.desc}
-                userid={post.userid}
-                id={post.id}
-            />
+    <div className="AllPostContainer" data-testid="allpost">
+      <div className="RecentlyAskedHeading">
+        <li className="AllPostsHeading">Recently Asked</li>
+      </div>
+
+      {posts.map((post: PostCardValues) => (
+        <PostCard
+          title={post.title}
+          desc={post.desc}
+          userid={post.userid}
+          id={post.id}
+        />
       ))}
     </div>
   );
