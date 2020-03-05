@@ -13,7 +13,7 @@ export const AllPostContainer = () => {
     // console.log(posts)
   
   return (
-    <div className='AllPostContainer'>
+    <div className='AllPostContainer' data-testid='allpost'>
         <div className="RecentlyAskedHeading">
             <li className="AllPostsHeading">Recently Asked</li>
         </div>

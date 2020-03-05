@@ -30,7 +30,7 @@ export const MainPage = (props: MainpageValues) => {
         setActiveNav(index)
     }
     return(
-       <body className="MainPageMain">
+       <body className="MainPageMain" data-testid='mainpage'>
             <MainHeader setUser={props.setUser}/>
             <body className="MainBody">
                 <SideBar activeSection={activeNav} setActiveSection={setNav}/>

@@ -88,7 +88,7 @@ export const LoginBox = (props:loginPageValues) => {
 
     if(props.loginSignup === 0){
         return(
-        <section className = "LoginBoxSection">
+        <section className = "LoginBoxSection" data-testid = 'loginbox'>
             <img className = "LoginBoxSectionImg" src = {logo} alt = "LOGO"/>
             <input className = "LoginBoxSectionInput" placeholder='Email' type="text" value={semail} onChange={e => setEmail(e.target.value)}/>
             <input className = "LoginBoxSectionInput" placeholder='Password' type="password" value={spassword} onChange={e => setPassword(e.target.value)}/>
@@ -101,7 +101,7 @@ export const LoginBox = (props:loginPageValues) => {
     }
     else{
         return(
-            <section className = "LoginBoxSection">
+            <section className = "LoginBoxSection" data-testid = 'loginbox'>
             <img className = "LoginBoxSectionImg"  src = {logo} alt = "LOGO"/>
             <input className = "LoginBoxSectionInput" value={susername} placeholder='Full Name' id="username" type = "text" onChange={e => setUsername(e.target.value)}/>
             <li className="errorMsg">{validateUsername}</li>

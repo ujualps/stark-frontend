@@ -8,7 +8,7 @@ interface MainHeaderValue{
 
 export const MainHeader = (props: MainHeaderValue) => {
     return(
-        <header className = 'MainHeaderDiv'>
+        <header className = 'MainHeaderDiv' data-testid='mainheader'>
             <img src = {logo} alt= 'LOGO'/>
             <input placeholder="Search..." className = 'MainHeaderSearchInput' type = 'text'/>
             <button className='MainHeaderSearchButton' type="button">Search</button>

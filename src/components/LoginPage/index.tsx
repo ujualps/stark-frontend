@@ -18,7 +18,7 @@ export const LoginPage = (props:user) => {
     }
     
     return(
-        <main className = 'LoginPageMain'>
+        <main className = 'LoginPageMain'data-testid='loginpage'>
             <section className = 'LoginPageSection'>
                 <img className="LoginPageImage" src = {ironman} alt ="Iron man"/>
             </section>

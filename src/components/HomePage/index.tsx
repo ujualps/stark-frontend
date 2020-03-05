@@ -10,7 +10,7 @@ interface HomePageValues{
 
 export const HomePage = (props:HomePageValues) => {
     return(
-        <main className="HomePageMain">
+        <main className="HomePageMain" data-testid='home'>
             <div className="MainPageContents">
                 <NewPostBox userId={props.userId}/>
                 <AllPostContainer/>
