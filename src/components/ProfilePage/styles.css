@@ -23,6 +23,6 @@
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  border: 15px solid white;
+  border: 10px solid rgb(255, 255, 255);
   margin-top: 10em;
 }
