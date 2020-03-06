@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./styles.css";
 import logo from "../../logo.jpg";
-import { Search } from "../Search";
+import {LogginSearch} from '../LogginSearch'
 
 interface MainHeaderValue {
   setUser: (id: number) => void;
@@ -19,7 +19,7 @@ export const MainHeader = (props: MainHeaderValue) => {
       <button className="MainHeaderSearchButton" type="button">
         Search
       </button> */}
-      {/* <Search /> */}
+      <LogginSearch />
       <button onClick={() => props.setUser(0)} className="MainHeaderA">
         Logout
       </button>
