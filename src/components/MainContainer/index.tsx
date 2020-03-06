@@ -12,6 +12,7 @@ interface MainpageValues {
 
 export const MainPage = (props: MainpageValues) => {
   const [activeNav, setActiveNav] = React.useState(0);
+  // const [searchText, setSearchText] = React.useState('')
 
   const setContent = () => {
     if (activeNav === 0) {

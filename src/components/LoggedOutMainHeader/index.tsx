@@ -5,6 +5,8 @@ import { Search } from "../Search";
 
 interface MainHeaderValue {
   setUser: (id: number) => void;
+  setSearchText: (text: string) => void;
+  setActiveNav: (nav: number) => void;
 }
 
 export const LoggedOutMainHeader = (props: MainHeaderValue) => {
@@ -19,7 +21,7 @@ export const LoggedOutMainHeader = (props: MainHeaderValue) => {
       <button className="MainHeaderSearchButton" type="button">
         Search
       </button> */}
-      <Search />
+      <Search setActiveNav={props.setActiveNav} setSearchText={props.setSearchText}/>
       <button onClick={() => props.setUser(-1)} className="MainHeaderA">
         SignUp or Login
       </button>

@@ -19,7 +19,7 @@ export const MainHeader = (props: MainHeaderValue) => {
       <button className="MainHeaderSearchButton" type="button">
         Search
       </button> */}
-      <Search />
+      {/* <Search /> */}
       <button onClick={() => props.setUser(0)} className="MainHeaderA">
         Logout
       </button>

@@ -15,39 +15,41 @@ export const LoginBox = (props: loginPageValues) => {
   const [sdesignation, setDesignation] = React.useState("");
   const [sdob, setDob] = React.useState("");
   const [spassword, setPassword] = React.useState("");
+  const [srepeatPassword, setRepeatPassword] = React.useState("");
   const [validateEmail, setValidateEmail] = React.useState("");
   const [validateUsername, setValidateUsername] = React.useState("");
   const [validateDesignation, setValidateDesignation] = React.useState("");
   const [validatePassword, setValidatePassword] = React.useState("");
+  const [validatePasswordMatch, setValidatePasswordMatch] = React.useState("");
   const [validateDob, setValidateDob] = React.useState("");
 
   const handleSignUpClick = () => {
     if (!/[a-zA-Z ]{4}[a-zA-Z ]*$/.test(susername)) {
       setValidateUsername("Invalid Username");
       return;
-    }
+    } else setValidateUsername("");
     if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(semail)) {
-      setValidateUsername("");
       setValidateEmail("Invalid Email");
       return;
-    }
+    } else setValidateEmail("");
     if (!/^[a-zA-Z][a-zA-Z ]*$/.test(sdesignation)) {
-      setValidateEmail("");
       setValidateDesignation("Invalid Designation");
       return;
-    }
+    } else setValidateDesignation("");
     if (
       !/^([0-2][0-9]|(3)[0-1])(-)(((0)[0-9])|((1)[0-2]))(-)\d{4}$/.test(sdob)
     ) {
-      setValidateDesignation("");
       setValidateDob("Invalid DOB");
       return;
-    }
+    } else setValidateDob("");
     if (!/^.{8}.*$/.test(spassword)) {
-      setValidateDob("");
       setValidatePassword("Password must contain minimum 8 characters");
       return;
-    }
+    } else setValidatePassword("");
+    if (spassword != srepeatPassword) {
+      setValidatePasswordMatch("Password doesn't match");
+      return;
+    } else setValidatePasswordMatch("");
     axios
       .post("http://localhost:5000/users", {
         username: susername,
@@ -163,7 +165,14 @@ export const LoginBox = (props: loginPageValues) => {
           onChange={e => setPassword(e.target.value)}
         />
         <li className="errorMsg">{validatePassword}</li>
-        {/* <input className = "LoginBoxSectionInput" placeholder='Confirm Password' type = "text"/> */}
+        <input
+          className="LoginBoxSectionInput"
+          placeholder="Confirm Password"
+          type="password"
+          value={srepeatPassword}
+          onChange={e => setRepeatPassword(e.target.value)}
+        />
+        <li className="errorMsg">{validatePasswordMatch}</li>
         <div className="RowSpaceBetween">
           <button className="SigninButton" onClick={() => handleSignUpClick()}>
             Sign Up

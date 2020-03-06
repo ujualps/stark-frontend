@@ -4,7 +4,8 @@ import { MainHeader } from "./components/MainHeader";
 // import {LoginBox} from './components/LoginBox'
 import { LoginPage } from "./components/LoginPage";
 import { MainPage } from "./components/MainContainer";
-import {LoggedOutMainPage} from "./components/LoggedOutMainContainer";
+import { LoggedOutMainPage } from "./components/LoggedOutMainContainer";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [UserId, setUserId] = React.useState(0);
@@ -15,7 +16,7 @@ function App() {
   if (UserId === 0) {
     return (
       <div className="App">
-        <LoggedOutMainPage setUserId={setUserLoggedInStatus}/>
+        <LoggedOutMainPage setUserId={setUserLoggedInStatus} />
       </div>
     );
   } else if (UserId === -1) {
