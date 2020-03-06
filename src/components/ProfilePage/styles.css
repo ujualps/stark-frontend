@@ -9,7 +9,7 @@
   height: 30vh;
   background-color: orange;
 }
-
+ 
 .ProfileSection {
   display: grid;
   grid-template-columns: 60% 40%;
